@@ -1,0 +1,38 @@
+import  pandas as pd
+name=[]
+age=[]
+year=[]
+branch=[]
+def insertData(name2,age2,branch2,year2):
+    name.append(name2)
+    age.append(age2)
+    branch.append(branch2)
+    year.append(year2)
+def insertDataIntoDataFrame(namep,agep,yearp,branchp):
+    data={
+            'name':namep,
+            'age' : agep,
+            'year' : yearp,
+            'branch' : branchp
+        }
+    return data
+def showData():
+    
+    df=pd.DataFrame(insertDataIntoDataFrame(name,age,year,branch))
+            #print(name,age,year,branch)
+    print(df)
+k=1
+while(k==1):
+    name1=input("enter student name::")
+    age2=input("enter student age::")
+    branch3=input("enter the student branch ::")
+    year4=int(input("enter  your year::"))
+    insertData(name1,age2,branch3,year4)
+    choice =input("enter")
+    if (choice =="kk"):
+        showData()
+        break
+            
+        
+
+
